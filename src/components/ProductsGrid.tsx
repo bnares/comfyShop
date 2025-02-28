@@ -3,8 +3,9 @@ import { Link, useLoaderData } from 'react-router-dom'
 import { formatPrice } from '../utils';
 
 const ProductsGrid = () => {
-    const {products} = useLoaderData(); //we can get here data from paent component Landing. this component is nested inside Landing (not directly but nested) so using getLoaderData we can accesss info which are downloaded by Landing componetn
+    const {products, meta} = useLoaderData(); //we can get here data from paent component Landing. this component is nested inside Landing (not directly but nested) so using getLoaderData we can accesss info which are downloaded by Landing componetn
     console.log("Products: ",products);
+    console.log("grid meta ", meta);
   return (
     <div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
         
